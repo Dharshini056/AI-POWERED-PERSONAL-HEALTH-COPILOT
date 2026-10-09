@@ -14,11 +14,14 @@ load_dotenv(BASE_DIR / ".env")
 load_dotenv(BASE_DIR.parent / ".env")
 
 # Quick-start development settings - unsuitable for production
-SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-9&c9%a=3xylkr))al&pxo52e8*s1^+z3m**+#x^f%0s%6_wdi6')
+SECRET_KEY = os.environ["SECRET_KEY"]
 
-DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 't')
+DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv(
+    "ALLOWED_HOSTS",
+    "localhost,127.0.0.1"
+).split(",")
 
 # Application definition
 INSTALLED_APPS = [
