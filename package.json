@@ -1,0 +1,26 @@
+{
+  "name": "ai-personal-health-copilot-root",
+  "version": "1.0.0",
+  "description": "AI Personal Health Copilot - Multilingual OCR & Healthcare Timeline",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "start:backend": "python django_backend/manage.py runserver 8001",
+    "start:django": "python django_backend/manage.py runserver 8001",
+    "start:fastapi": "python backend/main.py",
+    "test:django": "python django_backend/manage.py test health --settings=config.settings",
+    "seed": "python generate_sample_docs.py"
+  },
+  "keywords": [
+    "healthcare",
+    "ocr",
+    "fhir",
+    "abdm",
+    "copilot",
+    "django",
+    "drf",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT"
+}
